@@ -69,7 +69,7 @@ Ademas para realizar una ejecucion de la aplicacion por uno mismo se debera ejec
     Password: 123456
     Kind: Person
     
-# REST para crear una incidencia
+# REST petición de usuario registrado
 
 http://localhost:8081/user
 
@@ -178,6 +178,4 @@ Para la realización de las pruebas de carga se requiere el uso de [Gatling](htt
 ```shell
 gatling.sh -s testGatling.scala
 ```
-
-//TODO:
 
