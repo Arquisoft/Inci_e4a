@@ -19,7 +19,7 @@
 * Laura Menéndez Pérez (UO244646)
 * Fernando Palazuelo Ginzo (UO244588)
 
-## Authors modificacion
+## Authors modificación
 
 * Pablo Amorin Triana (UO237060)
 * Hugo Perez Fernandez (UO250708)
@@ -32,7 +32,7 @@
 * Paloma Sierra Bonet (UO232919)
 * Pelayo Garcia Menendez (UO251765)
 
-## Descripcion
+## Descripción
 
 Este es el proyecto conjunto de los 4 módulos utilizados. 
 
@@ -40,7 +40,7 @@ Este es el proyecto conjunto de los 4 módulos utilizados.
 
 ### Loader: Ejecucion
 
-Para ejecutar la aplicacion se debe ir al directorio *ejecucion* y una vez ahi se dispondra de tres archivos .bat:
+Para ejecutar la aplicación se debe ir al directorio *ejecucion* y una vez ahi se dispondra de tres archivos .bat:
 
 * *Help*: Para ver la ayuda de la aplicacion.
 * *Info*: Para ver la informacion sobre la aplicacion.
@@ -68,10 +68,20 @@ Ademas para realizar una ejecucion de la aplicacion por uno mismo se debera ejec
     Login: 11223344C
     Password: 123456
     Kind: Person
+    
+# REST para crear una incidencia
+
+http://localhost:8081/user
+
+{ 
+	"login": "13864928P",
+	"password": "123456",
+	"kind": "Person"
+}    
    
 ### InciManager
 
-#### Ejecucion
+#### Ejecución
 
 1- Descargar Apache Kafka de su página oficial.
 
@@ -85,7 +95,8 @@ Ademas para realizar una ejecucion de la aplicacion por uno mismo se debera ejec
 
   ->bin\windows\kafka-server-start.bat config\server.properties
 
-4- Ejecutar eclipse desde la clase Application
+4- Para arrancarlo todo y que funcione, se debe ejecutar el siguiente comando, estando situado en la carpeta InciManager_e4a:
+``mvn spring-boot:run``
 
 5- Conectarse al localhost:8880
 
@@ -98,6 +109,7 @@ Ademas para realizar una ejecucion de la aplicacion por uno mismo se debera ejec
 
 # REST para crear una incidencia
 
+http://localhost:8880/notify
 { 
 	"login": "13864928P", 
 	"password": "123456", 
@@ -115,7 +127,7 @@ Ademas para realizar una ejecucion de la aplicacion por uno mismo se debera ejec
 
 ### InciDashboard
 
-#### Ejecucion
+#### Ejecución
 
 1. Arrancar [HSQLDB](https://sourceforge.net/projects/hsqldb/files/hsqldb/hsqldb_2_4/hsqldb-2.4.0.zip/download)
    * Para ello, acceder a la carpeta data/hsqldb/bin y lanzar el runServer.bat (o runServer.sh en caso de Linux/Mac).
